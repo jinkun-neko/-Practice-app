@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'pages#shiori'
+  get '/shiori' , to: 'pages#shiori'
+  get '/index' , to: 'books#index'
+  get '/new' , to: 'books#new'
 end

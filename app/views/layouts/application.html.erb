@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shiori</title>
+    <title></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+    <%= stylesheet_link_tag    'application', media: 'all',
+                               'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application',
+                               'data-turbolinks-track': 'reload' %>
+                               <linkhref = "https://unpkg.com/sanitize.css" rel = " stylesheet "/>
+    <%= render 'layouts/shim' %>
+  </head> 
+    <body>
+      <div class="container">
+        <%= render 'layouts/header' %>
+          <%= yield %>
+          <%= render 'layouts/footer' %>
+        </div>
+    </body>
 </html>
