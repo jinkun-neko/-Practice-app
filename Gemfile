@@ -7,7 +7,7 @@ gem 'bcrypt',       '3.1.13'
 gem 'puma', '~> 4.1'
 gem 'dotenv-rails'
 gem 'sass-rails', '>= 6'
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 4.0'  
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootstrap-sass', '3.3.7'
@@ -30,16 +30,14 @@ group :production do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
   gem 'rspec-rails'
-  gem 'spring-commands-rspec'
   gem 'capybara', '>= 2.15'
+  gem 'spring-commands-rspec'
   gem "factory_bot_rails"
   gem 'faker'
-  gem 'selenium-webdriver'
-   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'forgery_ja'
   gem 'webdrivers'
+  gem 'launchy', '~> 2.4.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
