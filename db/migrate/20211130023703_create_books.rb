@@ -3,9 +3,9 @@ class CreateBooks < ActiveRecord::Migration[6.0]
     create_table :books do |t|
       t.string :title
       t.string :author
-      t.date :sele_date
-      t.integer :pages
-      t.string :imgae
+      t.date :new_date
+      t.integer :page
+      t.string :image
 
       t.timestamps
     end

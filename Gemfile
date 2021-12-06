@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby '2.7.2'
-gem 'rails', '6.0.3'
 
+ruby '2.7.2'
+
+gem 'rails', '6.0.3'
 gem 'bcrypt',       '3.1.13'
 gem 'puma', '~> 4.1'
 gem 'dotenv-rails'
@@ -16,6 +17,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   gem 'mysql2', '>= 0.4.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
+  gem 'forgery_ja'
+  gem 'factory_bot_rails', '~> 4.10.0'
 end
 
 group :development do
@@ -31,11 +35,8 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '~> 2.15.4'
   gem 'spring-commands-rspec'
-  gem "factory_bot_rails"
-  gem 'faker'
-  gem 'forgery_ja'
   gem 'webdrivers'
   gem 'launchy', '~> 2.4.3'
 end
