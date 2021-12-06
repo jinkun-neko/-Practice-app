@@ -1,2 +1,23 @@
-<h1>アカウント製作ページ</h1>
+<% provide(:title, '本の登録') %>
+<h1 class = "shiori">本の登録</h1>
+    <div class="row">
+       <div class="col-md-6 col-md-offset-3">
+        <%= form_with(model: @book, local: true) do |f| %>
+            <%= render 'shared/error_messages' %>
+             <%= f.label :本のタイトル %>
+             <%= f.text_field :title, class: 'form-control' %>
+             <%= f.label :作者 %>
+             <%= f.text_field :author, class: 'form-control' %>
+             <%= f.label :発売日 %>
+             <%= f.date_select  :new_date , {}, class: 'form-control' %>
+             <%= f.label :総ページ数 %>
+             <%= f.text_field :page, class: 'form-control' %>
+             <%= f.label :画像 %>
+             <%= f.file_field :image, class: 'form-control' %>
+              
+            <%= f.submit "送信", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>
 
+<%= link_to "戻る" ,index_path %>

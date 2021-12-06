@@ -1,5 +1,13 @@
 <% provide(:title, @book.title) %>
-<h1>
-  <%= hidden_field_tag :id, @book.id %>
-  <%= @book.title %>
-</h1>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+    <ul>
+       <li>会員番号<%= @book.id %></li>
+       <li>タイトル:<%= @book.title %></li>
+       <li>ページ数:<%= @book.page %></li>
+       <%= link_to '戻る', root_path %>
+    </ul>
+    </section>
+   </aside>
+</div>
