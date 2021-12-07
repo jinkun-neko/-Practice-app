@@ -2,6 +2,24 @@
 @import "bootstrap";
 
 // template
+
+.plus {
+    width: 120px;  
+    height: auto;  
+    position: fixed;
+    bottom: 37px;
+    right: 15px;
+    transition: 0.1s;  
+    filter: drop-shadow(2px 2px 2px #aaa);
+}
+
+.plus:active {
+    filter: drop-shadow(0 0 0);
+    position: fixed;
+    right: 13px;
+    bottom: 35px;
+}
+
 header a {
   color: #fff;
 }
