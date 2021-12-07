@@ -13,7 +13,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to show_:id_path, notice: "本の#{@book.title} を登録しました。"
+      redirect_to show_path(@book.id), notice: "本の#{@book.title} を登録しました。"
     else
       render 'new'
     end
