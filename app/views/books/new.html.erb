@@ -26,14 +26,14 @@
                             <%= f.date_select :new_date, {start_year: 1930,end_year: (Time.now.year - 18),default: Date.new(1989, 1, 1)}, {class: 'form-control', style: 'display: inline-block;width: auto;'} %>
                  </div>  
                  <div class = "sucoshi">
-                            <%= f.submit "送信", class: "btn btn-success", style: 'background-color: #2d582d;border-color: #2d582d;'%> 
+                            <%= f.submit "送信", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
                 </div>
                  <div class = "sucoshi">
-                            <%= link_to "戻る" ,index_path ,style: ' color: #2d582d;'%>
+                 <%= link_to image_tag("/yaji2.png", class:"turn"), index_path  %>
                 </div>
                  <% end %>   
         </div>
      </div>
   </div>
 </div>
- 
+                    

@@ -3,21 +3,45 @@
 
 // template
 
+.turn{
+  width: 50px;  
+  height: auto;  
+  transition: 0.09s;  
+  position: fixed;
+  bottom:  50px;
+  left: 35px;
+  filter: drop-shadow(2px 2px 2px rgb(170, 170, 170));
+}
+
+.turn:active {
+  width: 49px;  
+  height: auto; 
+  opacity: 0.5;
+  position: fixed;
+  bottom:  49px;
+  left: 34px;
+  filter: drop-shadow(0 0 0);
+}
+
 .plus {
-    width: 120px;  
+    width: 80px;  
     height: auto;  
+    opacity: 1.0;
     position: fixed;
-    bottom: 37px;
-    right: 15px;
+    bottom: 58px;
+    right: 30px;
     transition: 0.1s;  
-    filter: drop-shadow(2px 2px 2px #aaa);
+    filter: drop-shadow(2px 2px 2px rgb(138, 138, 138));
 }
 
 .plus:active {
+    width: 79px;  
+    height: auto;  
+    opacity: 0.5;
     filter: drop-shadow(0 0 0);
     position: fixed;
-    right: 13px;
-    bottom: 35px;
+    bottom: 57px;
+    right: 29px;
 }
 
 header a {
@@ -112,6 +136,11 @@ body {
     margin-bottom: 10px;
   }
 
+  /*メインコンテンツ*/
+#contents {
+  padding-bottom: 80px; /*フッターの高さと同じ*/
+}
+
   /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -155,7 +184,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   #logo:hover {
-    color: rgb(255, 153, 224); //logのバックグランドカラーを変える。
+    color: rgba(230, 107, 36, 0.973); //logのバックグランドカラーを変える。
     background-color: #0B3B0B;
     text-decoration: none;
   }

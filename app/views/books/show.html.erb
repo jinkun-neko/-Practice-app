@@ -1,13 +1,17 @@
 <% provide(:title, @book.title) %>
 <div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-    <ul>
-       <li>会員番号<%= @book.id %></li>
-       <li>タイトル:<%= @book.title %></li>
-       <li>ページ数:<%= @book.page %></li>
-       <%= link_to '戻る', root_path %>
-    </ul>
-    </section>
-   </aside>
+     <div class =  "space">
+         <h1 class = "shiori"><%= @book.title %></h1>
+            <p>
+               作者:<%= @book.author %>
+            </p>
+            </p>
+            <p>
+               出版日:<%= @book.new_date %>
+            </p>
+            <p>
+               総ページ数:<%= @book.page %>
+            </p>
+
+            <%= link_to image_tag("/u_trun.png", class:"turn"), index_path  %>
 </div>
