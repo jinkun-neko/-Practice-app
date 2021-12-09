@@ -1,7 +1,13 @@
 @import "bootstrap-sprockets";
+@import url('https://fonts.googleapis.com/css?family=Kosugi');
 @import "bootstrap";
 
 // template
+
+.book-index-item{
+  padding: 30px ;
+  text-align: center; 
+}
 
 .turn{
   width: 50px;  
@@ -59,9 +65,16 @@ header a {
   margin-top: 10px;
 }
 
-.shiori{
-  color: #0B3B0B;
+.brown{
+  color: rgb(91, 33, 0);
+  font-family: 'Kosugi', sans-serif;
 }
+
+
+.brown_en{
+  color:rgb(91, 33, 0);
+}
+
 .btn-center{
 text-align: center;
 }

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/shiori' , to: 'pages#shiori'
   get '/index' , to: 'books#index'
   get '/new', to: 'books#new'
-  get '/show/:id', to: 'books#show', as: :books_show
+  get '/books/:id', to: 'books#show', as: :books_show
   resources :books
 end
  

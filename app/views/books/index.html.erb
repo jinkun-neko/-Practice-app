@@ -1,4 +1,12 @@
 <% provide(:title, '本の一覧') %>
-<h1 class ="shiori">本の一覧</h1>
+<h1 class ="brown">本の一覧</h1>
 <p>今まで読んできた本たちの一覧です。</p>
+<% @books.each do |book| %>
+  <div class = "book-index-item">
+                <%= link_to book.title, "/books/#{book.id}", style: 'color: rgb(91, 33, 0);'  %>
+    <div class = "book-time">
+                <%= book.created_at.strftime('%Y年%m月%d日 %H時%M分')%>
+    </div>
+  </div>
+<% end %>
 <%= link_to image_tag("/book.png", class:"plus"), new_path  %>

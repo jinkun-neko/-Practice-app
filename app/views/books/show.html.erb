@@ -1,17 +1,19 @@
 <% provide(:title, @book.title) %>
 <div class="row">
      <div class =  "space">
-         <h1 class = "shiori"><%= @book.title %></h1>
-            <p>
-               作者:<%= @book.author %>
-            </p>
-            </p>
-            <p>
-               出版日:<%= @book.new_date %>
-            </p>
-            <p>
-               総ページ数:<%= @book.page %>
-            </p>
-
-            <%= link_to image_tag("/u_trun.png", class:"turn"), index_path  %>
+         <h1 class = "brown"><%= @book.title %></h1>
+               <p>
+                  作者:<%= @book.author %>
+               </p>
+               </p>
+               <p>
+                  出版日:<%= @book.new_date %>
+               </p>
+               <p>
+                  総ページ数:<%= @book.page %>
+               </p>
+               <p>
+               作成日:<%= @book.created_at.strftime('%Y年%m月%d日 %H時%M分')%> / 更新日:<%= @book.updated_at.strftime('%Y年%m月%d日 %H時%M分')%>
+               </p>
+            <%= link_to image_tag("/yaji2.png", class:"turn"), index_path  %>
 </div>
