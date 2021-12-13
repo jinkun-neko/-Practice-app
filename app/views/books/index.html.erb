@@ -3,10 +3,11 @@
 <p>今まで読んできた本たちの一覧です。</p>
   <% @books.each do |book| %>
     <div class = "book-index-item">
-          <%= link_to book.title, "/books/#{book.id}", style: 'font-weight: bold; color: #2d582d;' %>
-          <%= link_to  "編集" ,"/books/#{book.id}/edit", style: 'color:  rgb(91, 33, 0);' %>
+    <%= link_to image_tag book.image.to_s, "/books/#{book.id}" %>
+    <p>
+      <%= link_to book.title, "/books/#{book.id}", style: 'font-weight: bold; color: #2d582d;' %>
+    </p>
         <div class = "book-time">
-          <%= book.created_at.strftime('%Y/%m/%d %H:%M')%>
         </div>
     </div>
   <% end %>

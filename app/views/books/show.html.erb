@@ -2,18 +2,24 @@
 <div class="row">
      <div class =  "space">
          <h1 class = "brown"><%= @book.title %></h1>
+         <p>
+         総ページ数:<%= @book.page %>
+         </p>
+         <p>
+         <%= image_tag @book.image.to_s %>
+         </p>
+         <p>
+         出版日:<%= l @book.new_date %>
+         </p>
+         <p>
+            作者:<%= @book.author %>
+         </p>
+         <p>
+            作成日:<%= l @book.created_at %> / 更新日:<%= l @book.updated_at%>
+         </p>
                <p>
-                  作者:<%= @book.author %>
-               </p>
-               </p>
-               <p>
-                  出版日:<%= l @book.new_date %>
-               </p>
-               <p>
-                  総ページ数:<%= @book.page %>
-               </p>
-               <p>
-               作成日:<%= l @book.created_at %> / 更新日:<%= l @book.updated_at%>
+               <%= link_to  "編集" ,"/books/#{@book.id}/edit", style: 'color:  rgb(91, 33, 0);' %>
+               <%= link_to '削除', "/books/#{@book.id}/edit", method: :delete, data: { confirm: "#{@book.title}を削除しますか？" } , style: 'color: rgb(91, 33, 0);' %>
                </p>
             <%= link_to image_tag("/yaji2.png", class:"turn"), index_path  %>
 </div>
