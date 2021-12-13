@@ -1,14 +1,20 @@
 <% provide(:title, '本の一覧') %>
-<h1 class ="brown">本の一覧</h1>
-<p>今まで読んできた本たちの一覧です。</p>
-  <% @books.each do |book| %>
-    <div class = "book-index-item">
-    <%= link_to image_tag book.image.to_s, "/books/#{book.id}" %>
-    <p>
-      <%= link_to book.title, "/books/#{book.id}", style: 'font-weight: bold; color: #2d582d;' %>
-    </p>
-        <div class = "book-time">
-        </div>
-    </div>
-  <% end %>
+  <h1 class ="brown">本の一覧</h1>
+    <p>今まで読んできた本たちの一覧です。</p>
+        <div class="col-4">
+          <% @books.each do |book| %>
+            <div class = "book-index-item">
+              <div class="col-md-4">
+                  <p>
+                      <%= link_to ("/books/#{book.id}") do %>
+                        <%=  image_tag book.picture.to_s %>
+                      <% end %>
+                  </p>
+                  <p>
+                    <%= link_to book.title, "/books/#{book.id}", style: 'font-weight: bold; color: #2d582d;' %>
+                  </p>
+              </div>
+           </div>
+       <% end %>
+       
 <%= link_to image_tag("/book.png", class:"plus"), books_new_path  %>

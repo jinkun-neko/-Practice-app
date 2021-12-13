@@ -4,9 +4,11 @@
 
 // template
 
-.book-index-item{
-  padding: 30px ;
-  text-align: center; 
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
 }
 
 .turn{

@@ -10,7 +10,7 @@ class BooksController < ApplicationController
 
   def update
       @book = Book.find(params[:id])
-       if @book.update(book_params)
+      if @book.update(book_params)
           redirect_to("/books/#{@book.id}")
       else
          render 'edit'
@@ -38,7 +38,7 @@ class BooksController < ApplicationController
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
-    redirect_to ("/books/destory.html.erb")
+    redirect_to("/index")
     flash[:success] = "#{@book.title} を削除しました。"
   end
   
@@ -46,6 +46,6 @@ class BooksController < ApplicationController
 
       def book_params
         params.require(:book).permit(:title, :author, :new_date,
-        :page, :image)
+        :page, :picture)
       end
 end
