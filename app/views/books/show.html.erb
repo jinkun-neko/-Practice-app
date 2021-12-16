@@ -1,4 +1,5 @@
 <% provide(:title, @book.title) %>
+ <div class = "bottom-show">
    <div class="row">
       <div class =  "space">
           <h1 class = "brown"><%= @book.title %></h1>
@@ -6,7 +7,7 @@
                      総ページ数:<%= @book.page %>
                   </p>
                   <p>
-                     <%= image_tag @book.picture.to_s %>
+                     <%= image_tag @book.picture.thumb250.to_s %>
                   </p>
                   <p>
                      出版日:<%= l @book.new_date %>
@@ -19,10 +20,10 @@
                   </p>
 
                   <p>
-                     <%= link_to  "編集", "/books/#{@book.id}/edit", style: 'color:  rgb(91, 33, 0);' %>
-                     <%= link_to "削除", "/books/#{@book.id}/edit", method: :delete, data: { confirm: "#{@book.title}を削除しますか？" } , style: 'color: rgb(91, 33, 0);' %>
+                     <%= link_to "編集", edit_book_path(@book.id), style: 'color:  rgb(91, 33, 0);' %>
+                     <%= link_to "削除", @book, method: :delete, data: { confirm: "#{@book.title}を削除しますか？" } , style: 'color: rgb(91, 33, 0);' %>
                   </p>
          </div>
     </div>
-
+</div>
 <%= link_to image_tag("/yaji2.png", class:"turn"), index_path  %>
