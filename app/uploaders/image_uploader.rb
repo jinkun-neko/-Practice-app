@@ -27,6 +27,10 @@ class ImageUploader < CarrierWave::Uploader::Base
     %w(jpg jpeg gif png)
   end
 
+  def default(*args)
+    "images/cats1.jpg"
+  end
+
   def filename
     super.chomp(File.extname(super)) + '.jpg' if original_filename.present?
   end

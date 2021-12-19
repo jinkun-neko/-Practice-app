@@ -4,7 +4,7 @@ ja:
       book:
         title: タイトル
         page: 総ページ数
-        image: 画像
+        Picture: 画像
         new_date: 出版日
         author: 作者
       user:

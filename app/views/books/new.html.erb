@@ -13,7 +13,7 @@
                   
                   <div class = "sukima">
                   <%= f.label :出版日 ,style: 'display: inline-block;width: auto;'%>  <%= f.label :※必須 ,style: 'display: inline-block;width: auto; auto; color: red;'  %>
-                  <%= f.date_select :new_date, {start_year: 1950,end_year: (Time.now.year),default: Date.new(1990, 1, 1)}, {class: 'form-control', style: 'display: inline-block;width: auto;'} %>
+                  <%= f.date_select :new_date, {start_year: 1950,end_year: (Time.now.year),default: Date.new(2021, 1, 1)}, {class: 'form-control', style: 'display: inline-block;width: auto;'} %>
                   </div>  
 
                   <div class = "sukoshi">
@@ -37,7 +37,7 @@
                   </div>
 
                   <div class = "sucoshi">
-                  <%= link_to image_tag("/yaji2.png", class:"turn"), index_path  %>
+                  <%= link_to image_tag("/yaji2.png", class:"turn"), books_path  %>
                   </div>
             <% end %>   
         </div>
