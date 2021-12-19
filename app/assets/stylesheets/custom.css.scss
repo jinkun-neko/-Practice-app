@@ -7,6 +7,28 @@
 
 //books
 
+.label{
+    margin-left: -5px;
+    font-size: 14px;
+    display: inline-block;
+    width: auto; 
+    color: rgb(102, 67, 47)
+}
+
+.label_green{
+  margin-left: -5px;
+  display: inline-block;
+  width: auto; 
+  color: #429442;
+}
+
+.label_red{
+  margin-left: -5px;
+  display: inline-block;
+  width: auto; 
+  color: rgb(255, 89, 89);
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -62,6 +84,7 @@ header a {
 .red{
   color: red;
 }
+
 .sukima {
   margin-top: 30px;
 }
@@ -79,8 +102,17 @@ header a {
   font-family: 'Kosugi', sans-serif;
 }
 
-.brown_en{
+.brown_en {
   color:rgb(91, 33, 0);
+}
+
+.shupan {
+  margin-top: 27px;
+  margin-bottom: 8px;
+}
+
+.shiori{
+  color: #0B3B0B;
 }
 
 .btn-center{

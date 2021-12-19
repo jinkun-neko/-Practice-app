@@ -1,22 +1,39 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<% provide(:title, '新規登録') %>
+  <h1 class ="brown">新規登録</h1>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class = "sucoshi">
+          <%= form_with(model: @user, local: true) do |f| %>
+              <%= render 'shared/error_messages_users' %>
+                  <div class = "sukoshi">
+                  <%= f.label  :名前,class: 'label' %><%= f.label :※任意 ,class: 'label_green' %>
+                  <%= f.text_field :name, class: 'form-control',placeholder:"本の作者を入力してください" %>
+                  </div>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_with(model: @user, local: true) do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
+                  <div class = "sukoshi">
+                  <%= f.label :メール,class: 'label' %><%= f.label :※必須 ,class: 'label_red' %>
+                  <%= f.text_field :email, class: 'form-control',placeholder:"" %>
+                  </div>
 
-      <%= f.label :email %>
-      <%= f.email_field :email %>
+                  <div class = "sukoshi">
+                  <%= f.label :パスワード,class: 'label' %><%= f.label :※必須 ,class: 'label_red' %>
+                  <%= f.password_field :password, class: 'form-control',placeholder:"" %>
+                  </div>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+                  <div class = "sukoshi">
+                  <%= f.label :パスワード確認,class: 'label' %><%= f.label :※必須 ,class: 'label_red' %>
+                  <%= f.password_field :password_confirmation, class: 'form-control',placeholder:"" %>
+                  </div>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+                  <div class = "sukima ">
+                      <%= f.submit "保存", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
+                  </div>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+                <div class = "sucoshi">
+                <%= link_to image_tag("/yaji2.png", class:"turn"), books_path  %>
+                </div>
+          <% end %>   
+      </div>
+   </div>
 </div>
+      
