@@ -29,6 +29,7 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   def default(*args)
     "cats240.jpg"
+    "cats_icon.png"
   end
 
   def filename

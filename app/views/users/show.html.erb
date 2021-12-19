@@ -1,11 +1,15 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= @user.picture %>
-        <%= @user.name %>
-      </h1>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <h1 class="brown">
+          <% if @user.picture? %>
+              <%= image_tag @user.picture.to_s %>
+          <% else %>      
+             <%= image_tag  'cats_icon.png' ,class: "user_defult_icon", alt: "user_icon" %>
+          <% end %>   
+          <%= @user.name %>
+        </h1>
     </section>
   </aside>
 </div>

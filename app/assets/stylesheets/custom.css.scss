@@ -102,6 +102,27 @@ header a {
   font-family: 'Kosugi', sans-serif;
 }
 
+.btn_new{
+  display: block; 
+  text-align: center;
+   width: 150px;
+   border-radius: 5px;
+  background-color:rgba(91, 33, 0, 0.97); 
+  border-color:rgba(91, 33, 0, 0.97); 
+  padding: 15px 25px;
+  margin: 30px auto;
+}
+
+.btn_new:hover{
+  display: block; 
+  color: #fff;
+  text-decoration: none;
+  background-color:rgba(82, 65, 55, 0.97); 
+  border-color:rgba(82, 65, 55, 0.97); 
+  padding: 15px 25px;
+  margin: 30px auto;
+}
+
 .brown_en {
   color:rgb(91, 33, 0);
 }
@@ -322,6 +343,11 @@ a:hover {
 
 /* sidebar */
 
+.user_defult_icon{
+  height: 200px;
+  width: auto;
+}
+
 aside {
   section.user_info {
     margin-top: 20px;
@@ -339,11 +365,13 @@ aside {
       line-height: 1;
     }
     h1 {
-      font-size: 1.4em;
+      font-size:  35px;
       text-align: left;
-      letter-spacing: -1px;
+      letter-spacing: 3px;
+      padding-left: 10px;
       margin-bottom: 3px;
-      margin-top: 0px;
+      margin-left: 4px;
+      margin-top: 5px;
     }
   }
 }
