@@ -7,7 +7,7 @@
             <%= form_with(model: @book, local: true) do |f| %>
                <%= render 'shared/error_messages_books' %>
                   <div class = "sucoshi">
-                              <%= f.label :本のタイトル,class: 'label'  %><%= f.label :※必須 ,class: 'label_red' %>
+                              <%= f.label :本のタイトル,class: 'label' %><%= f.label :※必須 ,class: 'label_red' %>
                               <%= f.text_field :title, class: 'form-control',placeholder:"本のタイトルを書いてください。" %>
                   </div>
 
