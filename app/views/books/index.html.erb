@@ -1,26 +1,28 @@
 <div class = "full">
-  <% provide(:title, '本の一覧') %>
-    <h1 class ="brown">本の一覧</h1>
-      <p>今まで読んできた本たちの一覧です。</p>
-        <div class =  "space">
-            <% @books.each do |book| %>
-              <div class="col-md-4">
-                <div class = "book-index-item">
-                    <p>
-                       <%= link_to ("/books/#{book.id}") do %>
-                         <% if book.picture? %>
-                              <%=  image_tag book.picture.to_s , style: 'border: solid rgb(91, 33, 0) 3px;'%>
-                         <% else %>    
-                              <%= image_tag 'cats240.jpg' , class: "book-defult", alt: "ブックデフォルト", style: 'border: solid rgb(91, 33, 0) 3px;' %>
-                          <% end %>
-                       <% end %>   
-                    </p>
-                    <p>
-                      <%= link_to book.title, "/books/#{book.id}", style: 'font-weight: bold; color:rgb(91, 33, 0); font-size:15px; text-align:center;' %>
-                    </p>
-                </div>
-            </div>
-        <% end %>
-     </div> 
+    <div class = "margin-top4">
+    <% provide(:title, '本の一覧') %>
+      <h1 class ="brown">本の一覧</h1>
+        <p>今まで読んできた本たちの一覧です。</p>
+          <div class =  "space">
+              <% @books.each do |book| %>
+                <div class="col-md-4">
+                  <div class = "book-index-item">
+                      <p>
+                        <%= link_to ("/books/#{book.id}") do %>
+                          <% if book.picture? %>
+                                <%=  image_tag book.picture.to_s , style: 'border: solid rgb(91, 33, 0) 3px;'%>
+                          <% else %>    
+                                <%= image_tag 'cats240.jpg' , class: "book-defult", alt: "ブックデフォルト", style: 'border: solid rgb(91, 33, 0) 3px;' %>
+                            <% end %>
+                        <% end %>   
+                      </p>
+                      <p>
+                        <%= link_to book.title, "/books/#{book.id}", style: 'font-weight: bold; color:rgb(91, 33, 0); font-size:15px; text-align:center;' %>
+                      </p>
+                  </div>
+              </div>
+          <% end %>
+      </div> 
+  </div>
 </div>
 <%= link_to image_tag("/book.png", class:"plus"), new_book_path  %>

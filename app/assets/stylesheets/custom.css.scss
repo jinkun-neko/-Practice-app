@@ -2,30 +2,145 @@
 @import url('https://fonts.googleapis.com/css?family=Kosugi');
 @import "bootstrap";
 
-// template
-
-
 //books
 
-.label{
+.shupan {
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+
+.shupan2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+ //label
+ .label{
+  margin-left: -5px;
+  font-size: 14px;
+  display: inline-block; 
+  color: rgb(102, 67, 47)
+}
+.label2{
+ margin-left: 0px;
+ font-size: 14px;
+ display: inline-block; 
+ color: rgb(102, 67, 47)
+}
+.label3 {
     margin-left: -5px;
     font-size: 14px;
     display: inline-block; 
     color: rgb(102, 67, 47)
 }
-
 .label_green{
-  margin-left: -5px;
-  display: inline-block;
-  width: auto; 
-  color: #429442;
+margin-left: -5px;
+display: inline-block;
+width: auto; 
+color: #429442;
+}
+.label_red{
+margin-left: -5px;
+display: inline-block;
+width: auto; 
+color: rgb(255, 89, 89);
+}
+.label_green2{
+margin-left: 0px;
+display: inline-block;
+width: auto; 
+color: #429442;
+}
+.label_red2{
+margin-left: 0px;
+display: inline-block;
+width: auto; 
+color: rgb(255, 89, 89);
 }
 
-.label_red{
-  margin-left: -5px;
-  display: inline-block;
-  width: auto; 
-  color: rgb(255, 89, 89);
+//sign_up
+
+ .sign_up{
+  color: indianred;
+ }
+
+ //margin
+ 
+ .margin-top{
+  margin-top: 50px;
+}
+ .margin-top2 {
+  margin-top: 110px;
+}
+ .margin-top3 {
+     margin-top: 80px;
+ }
+ .margin-top4 {
+   margin-top: 30px;
+ }
+
+//sukoshi
+
+.sucoshi{
+  margin-top: 10px;
+}
+.sucoshi2 {
+  margin-top: 5px;
+}
+
+//shita
+
+.shita{
+  margin-bottom: 30px;
+}
+.shita2 {
+  margin-bottom: 30px;
+}
+
+//sukima
+
+ .sukima {
+  margin-top: 30px;
+}
+.sukima2 {
+  margin-top: 20px;
+}
+.sukima3 {
+  margin-top: 30px;
+}
+
+//color
+
+.brown_en {
+  color:rgb(91, 33, 0);
+}
+.brown{
+  color: rgb(91, 33, 0);
+  font-family: 'Kosugi', sans-serif;
+}
+.brown2 {
+  color: rgb(91, 33, 0);
+  font-family: 'Kosugi', sans-serif;
+}
+
+ .link-color {
+   margin: 20px;
+   font-size: 15px;
+   color: green;
+   background-color: green;
+ }
+   
+ .red{
+  color: red;
+}
+
+.green {
+  color: green;
+  font-size: 15px;
+}
+
+.shiori{
+  color: #0B3B0B;
 }
 
 .wrapper {
@@ -80,27 +195,6 @@ header a {
   color: #fff;
 }
 
-.red{
-  color: red;
-}
-
-.sukima {
-  margin-top: 30px;
-}
-
-.sucoshi{
-  margin-top: 10px;
-}
-
-.shita{
-  margin-bottom: 30px;
-}
-
-.brown{
-  color: rgb(91, 33, 0);
-  font-family: 'Kosugi', sans-serif;
-}
-
 .btn_new{
   display: block; 
   text-align: center;
@@ -122,19 +216,6 @@ header a {
   margin: 30px auto;
 }
 
-.brown_en {
-  color:rgb(91, 33, 0);
-}
-
-.shupan {
-  margin-top: 27px;
-  margin-bottom: 8px;
-}
-
-.shiori{
-  color: #0B3B0B;
-}
-
 .btn-center{
 text-align: center;
 }
@@ -146,11 +227,6 @@ text-align: center;
 .book-index-item{
   margin: 20px 30px;
   padding-top: 15px;
-}
-
-.green {
-  color: green;
-  font-size: 15px;
 }
 
 .link {
