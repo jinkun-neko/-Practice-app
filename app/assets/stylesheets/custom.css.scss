@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Kosugi');
 @import "bootstrap";
 
+//user
+.log_in{
+  position: absolute;
+  right: 25px;
+}
+
 //books
 
 .shupan {
@@ -22,7 +28,7 @@
   color: rgb(102, 67, 47)
 }
 .label2{
- margin-left: 0px;
+ margin-left: 3px;
  font-size: 14px;
  display: inline-block; 
  color: rgb(102, 67, 47)
@@ -33,26 +39,27 @@
     display: inline-block; 
     color: rgb(102, 67, 47)
 }
+
 .label_green{
-margin-left: -5px;
+margin-left: 2px;
 display: inline-block;
 width: auto; 
 color: #429442;
 }
 .label_red{
-margin-left: -5px;
+margin-left: 2px;
 display: inline-block;
 width: auto; 
 color: rgb(255, 89, 89);
 }
 .label_green2{
-margin-left: 0px;
+margin-left: 2px;
 display: inline-block;
 width: auto; 
 color: #429442;
 }
 .label_red2{
-margin-left: 0px;
+margin-left: 2px;
 display: inline-block;
 width: auto; 
 color: rgb(255, 89, 89);
@@ -108,6 +115,13 @@ color: rgb(255, 89, 89);
 .sukima3 {
   margin-top: 30px;
 }
+.sukima4 {
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+.sukima5 {
+  margin-top: -15px;
+}
 
 //color
 
@@ -122,13 +136,33 @@ color: rgb(255, 89, 89);
   color: rgb(91, 33, 0);
   font-family: 'Kosugi', sans-serif;
 }
+.brown3 {
+  margin-bottom: 0px;
+  color: rgb(91, 33, 0);
+  font-family: 'Kosugi', sans-serif;
+}
 
  .link-color {
-   margin: 20px;
    font-size: 15px;
-   color: green;
-   background-color: green;
+   padding: 4px;
+   color: #fff;
+   background-color: #256b25;
+   border-radius: 5px;
+   box-shadow: 3px 3px 4px rgb(122, 121, 121);
  }
+
+ .link-color:hover {
+  font-size: 15px;
+  padding: 4px;
+  transition: 0.09s;  
+  color: #fff;
+  position: relative;
+  left: 3px;
+  top: 3px;
+  text-decoration: none;
+  background-color:#67a867;
+  box-shadow: none;
+}
    
  .red{
   color: red;
@@ -397,9 +431,6 @@ a {
   color: rgb(255, 255, 255); 
 }
 
-a:visited {
-  color: #cecccc  
-}
 
 a:hover {
   color: #0B3B0B;

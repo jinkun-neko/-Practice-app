@@ -6,9 +6,9 @@
                <h1 class = "brown">本の登録</h1>
                 <%= form_with(model: @book, local: true) do |f| %>
                   <%= render 'shared/error_messages_books' %>
-                     <div class = "sukima2">
+                     <div class = "sukima5">
                            <%= f.label :本のタイトル,class: 'label' %><%= f.label :※必須 ,class: 'label_red' %>
-                           <%= f.text_field :title, class: 'form-control',placeholder:"本のタイトルを書いてください。" %>
+                           <%= f.text_field :title, class: 'form-control' %>
                      </div>
 
                      <div class = "shupan">
@@ -18,7 +18,7 @@
 
                      <div class = "sukima2">
                         <%= f.label :作者,class: 'label' %><%= f.label :※任意 ,class: 'label_green' %>
-                        <%= f.text_field :author, class: 'form-control',placeholder:"本の作者を書いてください。" %>
+                        <%= f.text_field :author, class: 'form-control' %>
                      </div>
 
                      <div class = "sukima2">
@@ -27,7 +27,7 @@
                      </div>
 
                      <div class = "sukima2">
-                        <%= f.label :画像,class: 'label' %><%= f.label :※必須 ,class: 'label_red' %>
+                        <%= f.label :画像,class: 'label' %><%= f.label :※必須 ,class: 'label_green' %>
                         <%= f.file_field :picture, class: 'form-control' %>    
                      </div>
                      
