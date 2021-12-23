@@ -8,10 +8,19 @@
                         <%= f.label :メール, class:'label' %>
                         <%= f.email_field :email, class: 'form-control'  %>
                     </div>
+
                     <div class = "sucoshi">
                         <%= f.label :パスワード, class:'label' %>
                         <%= f.password_field :password, class: 'form-control' %>
                     </div>  
+
+                    <div class = "sukima6">
+                        <%= f.label :remember_me, class: "checkbox inline" do %>
+                            <%= f.check_box :remember_me %>
+                            <span>次回から自動でログイン</span>
+                        <% end %>
+                    </div>
+                
                     <div class = "sukima4">
                         <%= f.submit "ログイン", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
                         <% end %>
