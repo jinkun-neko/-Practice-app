@@ -7,6 +7,7 @@
             <h1 class = "brown">本の編集</h1>
                 <%= form_with(model: @book, local: true) do |f| %>
                             <%= render 'shared/error_messages_books' %>
+                            
                     <div class = "sucoshi">
                         <%= f.label :本のタイトル, class:'label2' ,style: 'display: inline-block;width: auto;'  %>   <%= f.label :※必須 ,class: 'label_red2' %> 
                         <%= f.text_field :title, class: 'form-control',placeholder:"本のタイトルを書いてください。" %>
@@ -33,7 +34,7 @@
                     </div>
 
                     <div class = "sucoshi">
-                        <%= f.submit "保存", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
+                        <%= f.submit "変更", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
                     </div>
 
                     <div class = "sucoshi">

@@ -1,4 +1,5 @@
 class Book < ApplicationRecord
+    belongs_to :user
     mount_uploader  :picture, ImageUploader
     validates :title,  presence: true,  length: { maximum: 50 }, uniqueness: true
     validates :author, presence: false, length: { maximum: 50 }

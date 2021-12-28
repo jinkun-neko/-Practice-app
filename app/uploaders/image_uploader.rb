@@ -22,6 +22,14 @@ class ImageUploader < CarrierWave::Uploader::Base
     process resize_to_fit: [250, 250]
   end
 
+  version :icon do
+    process resize_to_fill: [150, 150, "Center"]
+  end
+
+  version :icon50 do
+    process resize_to_fill: [35, 35, "Center"]
+  end
+
    # jpg,jpeg,gif,pngしか受け付けない
    def extension_white_list
     %w(jpg jpeg gif png)

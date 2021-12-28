@@ -1,9 +1,8 @@
-<div class = "full">
-    <div class = "margin-top4">
-    <% provide(:title, '本の一覧') %>
-      <h1 class ="brown">本の一覧</h1>
-        <p>今まで読んできた本たちの一覧です。</p>
-          <div class =  "space">
+<% provide(:title, '本の一覧') %>
+    <div class="margin-top5">
+      <h1 class="brown4">本の一覧</h1>
+        <p>今まで読んだ本の一覧です。今まで読んだ本の一覧です。</p>
+          <div class="space2">
               <% @books.each do |book| %>
                 <div class="col-md-4">
                   <div class = "book-index-item">
@@ -24,5 +23,5 @@
           <% end %>
       </div> 
   </div>
-</div>
 <%= link_to image_tag("/book.png", class:"plus"), new_book_path  %>
+z

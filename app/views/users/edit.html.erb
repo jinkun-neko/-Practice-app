@@ -1,0 +1,32 @@
+<% provide(:title, "ユーザー編集") %>
+   <div class = "margin-top3"> 
+      <h1 class = "brown4">ユーザー編集</h1>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">  
+              <div class = "sucoshi">
+                <%= form_with(model: @user, local: true) do |f| %>
+                    <%= render 'shared/error_messages_users' %>
+                    <div class = "sucoshi">
+                        <%= f.label :名前, class:'label2'  %>
+                        <%= f.text_field :name, class: 'form-control' %>
+                    </div>
+                    <div class = "sucoshi">
+                        <%= f.label :メール, class:'label2'  %>
+                        <%= f.email_field :email, class: 'form-control' %>
+                    </div>
+                    <div class = "sucoshi">
+                        <%= f.label :パスワード, class:'label2'  %>
+                        <%= f.password_field :password, class: 'form-control' %>
+                    </div>
+                    <div class = "sukoshi">
+                        <%= f.label :Confirmation, "パスワード再確認", class:'label2'  %>
+                        <%= f.password_field :password_confirmation, class: 'form-control' %>
+                    </div>
+
+                    <div class = "sucoshi3">
+                        <%= f.submit "変更", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
+                    </div>
+            <% end %>
+            </div>
+        </div>
+    </div>

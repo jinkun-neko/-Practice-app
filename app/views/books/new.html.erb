@@ -6,7 +6,7 @@
                <h1 class = "brown">本の登録</h1>
                 <%= form_with(model: @book, local: true) do |f| %>
                   <%= render 'shared/error_messages_books' %>
-                     <div class = "sukima5">
+                     <div class = "sukima">
                            <%= f.label :本のタイトル,class: 'label' %><%= f.label :※必須 ,class: 'label_red' %>
                            <%= f.text_field :title, class: 'form-control' %>
                      </div>
