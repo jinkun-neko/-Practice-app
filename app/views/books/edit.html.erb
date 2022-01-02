@@ -5,45 +5,10 @@
        <div class="col-md-6 col-md-offset-3">
         <div class = "sucoshi">
             <h1 class = "brown">本の編集</h1>
-                <%= form_with(model: @book, local: true) do |f| %>
-                            <%= render 'shared/error_messages_books' %>
-                            
-                    <div class = "sucoshi">
-                        <%= f.label :本のタイトル, class:'label2' ,style: 'display: inline-block;width: auto;'  %>   <%= f.label :※必須 ,class: 'label_red2' %> 
-                        <%= f.text_field :title, class: 'form-control',placeholder:"本のタイトルを書いてください。" %>
-                    </div>
-
-                    <div class = "shupan2">
-                        <%= f.label :出版日 , class:'label2' ,style: 'display: inline-block;width: auto;'%>  <%= f.label :※必須 ,class: 'label_red2'  %>
-                        <%= f.date_select :new_date, {start_year: 1950,end_year: (Time.now.year),default: Date.new(1990, 1, 1)}, {class: 'form-control', style: 'display: inline-block; width:auto;'} %>
-                    </div>  
-
-                    <div class = "sukoshi">
-                        <%= f.label :作者, class:'label2' ,style: 'display: inline-block;width: auto;' %>  <%= f.label :※任意 ,class: 'label_green2' %>
-                        <%= f.text_field :author, class: 'form-control',placeholder:"本の作者を書いてください。" %>
-                    </div>
-            
-                    <div class = "sukoshi">
-                        <%= f.label :総ページ数, class:'label2' ,style: 'display: inline-block;width: auto;' %>   <%= f.label :※必須 ,class: 'label_red2'  %>
-                        <%= f.text_field :page, class: 'form-control',placeholder:"本の総ページ数を書いてください。" %>
-                    </div>
-                    
-                    <div class = "shita">
-                        <%= f.label :画像, class:'label2' ,style: 'display: inline-block;width: auto;' %>  <%= f.label :※任意 ,class: 'label_green2' %>
-                        <%= f.file_field :picture, class: 'form-control' %>    
-                    </div>
-
-                    <div class = "sucoshi">
-                        <%= f.submit "変更", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
-                    </div>
-
-                    <div class = "sucoshi">
-                        <%= link_to image_tag("/yaji2.png", class:"turn"), books_path  %>
-                    </div>
-            <% end %>   
+                <%= render partial: 'layouts/form_book', locals: { article: @book } %>
           </div>
        </div>
-    </div>
+     </div>
   </div>
 </div>
                     

@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <title><%= title(yield(:title)) %></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all',
-                               'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application',
-                               'data-turbolinks-track': 'reload' %>
-                               <linkhref = "https://unpkg.com/sanitize.css" rel = " stylesheet "/>
-    <%= render 'layouts/shim' %>
-  </head> 
-    <body>
-      <div class="container">
-        <% flash.each do |message_type, message| %>
-          <div class="alert alert-<%= message_type %>"><%= message %></div>
-        <% end %>
-          <%= render 'layouts/header' %>
-            <div id="contents">
-              <%= yield %>
-            </div>
-          <%= render 'layouts/footer' %>
-        </div>
-    </body>
+  <html>
+    <head>
+    <title><%= title(yield(:title)) %></title>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag    'application', media: 'all',
+                                'data-turbolinks-track': 'reload' %>
+      <%= javascript_pack_tag 'application',
+                                'data-turbolinks-track': 'reload' %>
+      <linkhref = "https://unpkg.com/sanitize.css" rel = " stylesheet "/>
+      <%= render 'layouts/shim' %>
+    </head> 
+      <body>
+        <div class="container">
+          <% flash.each do |message_type, message| %>
+            <div class="alert alert-<%= message_type %>"><%= message %></div>
+          <% end %>
+            <%= render 'layouts/header' %>
+              <div id="contents">
+                <%= yield %>
+              </div>
+            <%= render 'layouts/footer' %>
+          </div>
+      </body>
 </html>

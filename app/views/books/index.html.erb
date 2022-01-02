@@ -3,25 +3,7 @@
       <h1 class="brown4">本の一覧</h1>
         <p>今まで読んだ本の一覧です。今まで読んだ本の一覧です。</p>
           <div class="space2">
-              <% @books.each do |book| %>
-                <div class="col-md-4">
-                  <div class = "book-index-item">
-                      <p>
-                        <%= link_to ("/books/#{book.id}") do %>
-                          <% if book.picture? %>
-                                <%=  image_tag book.picture.to_s , style: 'border: solid rgb(91, 33, 0) 3px;'%>
-                          <% else %>    
-                                <%= image_tag 'cats240.jpg' , class: "book-defult", alt: "ブックデフォルト", style: 'border: solid rgb(91, 33, 0) 3px;' %>
-                            <% end %>
-                        <% end %>   
-                      </p>
-                      <p>
-                        <%= link_to book.title, "/books/#{book.id}", style: 'font-weight: bold; color:rgb(91, 33, 0); font-size:15px; text-align:center;' %>
-                      </p>
-                  </div>
-              </div>
-          <% end %>
-      </div> 
-  </div>
+              <%= render partial: 'layouts/img_default', locals: { article: @book } %>
+         </div> 
+    </div>
 <%= link_to image_tag("/book.png", class:"plus"), new_book_path  %>
-z

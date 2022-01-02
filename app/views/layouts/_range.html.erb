@@ -1,0 +1,9 @@
+<%= form_with(model: @book, local: true) do |f| %>
+    <div class = "sukima">
+        <f.label for="customRange2" class="form-label">今日読んだページ数は？</label>
+        <f.input type="range" class="form-range" min=":now_pages" max=":page" id="customRange2">
+    </div>
+    <div class = "sukima">
+        <%= f.submit "登録", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
+    </div>
+<% end %>

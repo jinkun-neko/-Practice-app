@@ -1,0 +1,18 @@
+<% @books.each do |book| %>
+    <div class="col-md-4">
+      <div class = "book-index-item">
+            <p>
+               <%= link_to ("/books/#{book.id}") do %>
+                  <% if book.picture? %>
+                        <%=  image_tag book.picture.to_s , style: 'border: solid rgb(91, 33, 0) 3px;'%>
+                   <% else %>    
+                            <%= image_tag 'cats240.jpg' , class: "book-defult", alt: "ブックデフォルト", style: 'border: solid rgb(91, 33, 0) 3px;' %>
+                   <% end %>
+               <% end %>   
+            </p>
+            <p>
+              <%= link_to book.title, "/books/#{book.id}", style: 'font-weight: bold; color:rgb(91, 33, 0); font-size:15px; text-align:center;' %>
+            </p>
+       </div>
+   </div>
+<% end %>

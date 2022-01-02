@@ -1,0 +1,26 @@
+<%= form_with(model: @book, local: true) do |f| %>
+    <%= render 'shared/error_messages_books' %>
+       <div class = "sukima">
+             <%= f.label :本のタイトル,class: 'label' %><%= f.label :※必須 ,class: 'label_red' %>
+             <%= f.text_field :title, class: 'form-control' %>
+       </div>
+       <div class = "shupan">
+          <%= f.label :出版日 ,class: 'label'%><%= f.label :※必須 ,class: 'label_red' %>
+          <%= f.date_select :new_date, {start_year: 1950,end_year: (Time.now.year),default: Date.new(2021, 1, 1)}, {class: 'form-control', style: 'display: inline-block;width: auto; margin-left: 5px;'} %>
+       </div>  
+       <div class = "sukima2">
+          <%= f.label :作者,class: 'label' %><%= f.label :※任意 ,class: 'label_green' %>
+          <%= f.text_field :author, class: 'form-control' %>
+       </div>
+       <div class = "sukima2">
+          <%= f.label :総ページ数,class: 'label' %><%= f.label :※必須 ,class: 'label_red' %>
+          <%= f.text_field :page, class: 'form-control',placeholder:"数字/半角のみです。" %>
+       </div>
+       <div class = "sukima2">
+          <%= f.label :画像,class: 'label' %><%= f.label :※必須 ,class: 'label_green' %>
+          <%= f.file_field :picture, class: 'form-control' %>    
+       </div>
+       <div class = "sukima3">
+             <%= f.submit "保存", class: "btn btn-success", style: 'background-color: rgba(91, 33, 0, 0.97);border-color: rgba(91, 33, 0, 0.97);'%> 
+       </div>
+<% end %>  

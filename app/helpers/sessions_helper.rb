@@ -27,7 +27,7 @@ module SessionsHelper
 
     # ユーザーがログインしていればtrue、その他ならfalseを返す
     def logged_in?
-        !current_user.nil?
+        !current_user.nil?  #nill?であるかどうかを真偽値でかえす。
     end
 
     # 渡されたユーザーがカレントユーザーであればtrueを返す
@@ -37,9 +37,9 @@ module SessionsHelper
     
     # 永続的セッションを破棄する
     def forget(user)
-        user.forget
-        cookies.delete(:user_id)
-        cookies.delete(:remember_token)
+        user.forget      #ユーザーを忘れさせる。
+        cookies.delete(:user_id)  #クッキーを消す。(ユーザー消す。)
+        cookies.delete(:remember_token)  #クッキーを消す。(リメンバートークン消す。)
     end
 
     # 現在のユーザーをログアウトする

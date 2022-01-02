@@ -3,15 +3,15 @@
     <aside class="col-md-4">
       <section class="user_info">
         <h1 class="brown">
-                  <%= @user.name %>
-                  <%= @user.email %>
-                  <%= link_to  ("/picture") do %>
-                      <% if @user.picture? %>
-                          <%= image_tag @user.picture.icon.to_s ,class: "icon_maru" %>
-                      <% else %>      
-                          <%= image_tag  'cats_icon.png' ,class: "user_defult_icon", alt: "user_icon" %>
-                      <% end %>    
-                  <% end %>
+            <%= @user.name %>
+            <%= @user.email %>
+            <%= link_to  ("/picture") do %>
+                <% if @user.picture? %>
+                    <%= image_tag @user.picture.icon.to_s ,class: "icon_maru" %>
+                <% else %>      
+                    <%= image_tag  'cats_icon.png' ,class: "user_defult_icon", alt: "user_icon" %>
+                <% end %>    
+             <% end %>
             </h1>
         </section>
      </aside>

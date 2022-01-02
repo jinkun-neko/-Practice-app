@@ -34,10 +34,8 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-    def picture 
-      @user = User.find(params[:picture])
-    end
-
+    private
+    
    def user_params
       params.permit(:name, :email, :password,
       :password_confirmation, :picture)
